@@ -1,9 +1,14 @@
 package com.example.hantaton;
 
+import android.content.ClipData;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -30,6 +35,16 @@ public class rv_adapter extends RecyclerView.Adapter<rv_adapter.ViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull rv_adapter.ViewHolder holder, int position) {
         warn_schemas sch = warns.get(position);
+        holder.courseIV.setImageResource(sch.getImage());
+        holder.courseNameTV.setText(sch.getName());
+        holder.courseRatingTV.setText(sch.getRisks());
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ctx, MapActivity.class);
+                ctx.startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -38,9 +53,18 @@ public class rv_adapter extends RecyclerView.Adapter<rv_adapter.ViewHolder> {
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
+        public ClipData.Item currentItem;
+
+        private final ImageView courseIV;
+        private final TextView courseNameTV;
+        private final TextView courseRatingTV;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
+            courseIV = itemView.findViewById(R.id.idIVCourseImage);
+            courseNameTV = itemView.findViewById(R.id.idTVCourseName);
+            courseRatingTV = itemView.findViewById(R.id.idTVCourseRating);
+
         }
     }
 

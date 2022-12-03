@@ -3,8 +3,13 @@ package com.example.hantaton;
 public class warn_schemas {
     private String name;
     private String risks;
-    private String sec_mes;
     private int image;
+
+    public warn_schemas(String name, String risks, int image) {
+        this.name = name;
+        this.risks = risks;
+        this.image = image;
+    }
 
     public String getName() {
         return name;
@@ -20,14 +25,6 @@ public class warn_schemas {
 
     public void setRisks(String risks) {
         this.risks = risks;
-    }
-
-    public String getSec_mes() {
-        return sec_mes;
-    }
-
-    public void setSec_mes(String sec_mes) {
-        this.sec_mes = sec_mes;
     }
 
     public int getImage() {

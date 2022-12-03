@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "509880254981",
+    "firebase_url": "https://hantaton-default-rtdb.firebaseio.com",
+    "project_id": "hantaton",
+    "storage_bucket": "hantaton.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:509880254981:android:77f4776906001cd9c0926c",
+        "android_client_info": {
+          "package_name": "com.example.hantaton"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "509880254981-ki4ic8hq21l14j9881o3j6fv2kf105hm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCmmfrdEZKQ4AXYheTNsQ9Wu6OD2LlC6s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "509880254981-ki4ic8hq21l14j9881o3j6fv2kf105hm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

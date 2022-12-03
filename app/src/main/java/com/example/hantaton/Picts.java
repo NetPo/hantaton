@@ -1,0 +1,17 @@
+package com.example.hantaton;
+
+public class Picts {
+    private int image;
+
+    public int getImage() {
+        return image;
+    }
+
+    public void setImage(int image) {
+        this.image = image;
+    }
+
+    public Picts(int image) {
+        this.image = image;
+    }
+}
