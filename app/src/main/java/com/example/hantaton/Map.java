@@ -15,5 +15,6 @@ public class Map extends AppCompatActivity {
         setContentView(R.layout.activity_map);
         SubsamplingScaleImageView scaleImageView=findViewById(R.id.zoompic);
         scaleImageView.setImage(ImageSource.resource(R.drawable.logo));
+        int x=9;
     }
 }
