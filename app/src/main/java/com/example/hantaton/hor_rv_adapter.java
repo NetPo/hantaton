@@ -9,6 +9,9 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.davemorrissey.labs.subscaleview.ImageSource;
+import com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView;
+
 import java.util.List;
 
 public class hor_rv_adapter extends RecyclerView.Adapter<hor_rv_adapter.ViewHolder>{
@@ -30,7 +33,7 @@ public class hor_rv_adapter extends RecyclerView.Adapter<hor_rv_adapter.ViewHold
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Picts pictures = pics.get(position);
-        holder.schemview.setImageResource(pictures.getImage());
+        holder.schemview.setImage(ImageSource.resource(pictures.getImage()));
     }
 
     @Override
@@ -41,7 +44,7 @@ public class hor_rv_adapter extends RecyclerView.Adapter<hor_rv_adapter.ViewHold
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
 
-        private final ImageView schemview;
+        private final SubsamplingScaleImageView schemview;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);

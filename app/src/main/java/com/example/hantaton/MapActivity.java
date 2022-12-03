@@ -32,10 +32,18 @@ public class MapActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //from intent
+        Bundle arguments = getIntent().getExtras();
+        String num = arguments.get("Номер карты").toString();
+
+        if (num.equals("0")){
+            pics.add(new Picts(R.drawable.cust1));
+            pics.add(new Picts(R.drawable.cust2));
+        }
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map);
-        pics.add(new Picts(R.drawable.cust1));
-        pics.add(new Picts(R.drawable.cust2));
+
 
         //RecyclerView
         recyclerView = findViewById(R.id.list);

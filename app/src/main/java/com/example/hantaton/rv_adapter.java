@@ -1,5 +1,6 @@
 package com.example.hantaton;
 
+import android.annotation.SuppressLint;
 import android.content.ClipData;
 import android.content.Context;
 import android.content.Intent;
@@ -33,7 +34,7 @@ public class rv_adapter extends RecyclerView.Adapter<rv_adapter.ViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(@NonNull rv_adapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull rv_adapter.ViewHolder holder, @SuppressLint("RecyclerView") int position) {
         warn_schemas sch = warns.get(position);
         holder.courseIV.setImageResource(sch.getImage());
         holder.courseNameTV.setText(sch.getName());
@@ -42,6 +43,7 @@ public class rv_adapter extends RecyclerView.Adapter<rv_adapter.ViewHolder> {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ctx, MapActivity.class);
+                intent.putExtra("Номер карты", position);
                 ctx.startActivity(intent);
             }
         });
