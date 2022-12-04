@@ -20,8 +20,8 @@ public class Signin extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        button=findViewById(R.id.button);
+        setContentView(R.layout.activity_signin);
+        button=findViewById(R.id.button12);
         button.setOnClickListener(new View.OnClickListener() {
 
             @Override
