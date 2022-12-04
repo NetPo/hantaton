@@ -16,6 +16,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Hantaton">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBs2dCbwqJ4pvZuK3RW7T1kCK7UjC9q2RM"/>
         <activity
             android:name=".Signin"
             android:exported="false"/>
