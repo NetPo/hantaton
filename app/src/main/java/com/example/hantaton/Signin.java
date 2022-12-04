@@ -21,22 +21,14 @@ public class Signin extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signin);
-        button=findViewById(R.id.button12);
-        button.setOnClickListener(new View.OnClickListener() {
 
-            @Override
-            public void onClick(View view) {
                 IntentIntegrator intentIntegrator = new IntentIntegrator(
                         Signin.this
                 );
-                intentIntegrator.setPrompt("Вход в систему");
                 intentIntegrator.setBeepEnabled(true);
                 intentIntegrator.setOrientationLocked(true);
                 intentIntegrator.setCaptureActivity(Capture.class);
                 intentIntegrator.initiateScan();
-            }
-
-        });
 
     }
 

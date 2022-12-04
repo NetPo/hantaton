@@ -41,6 +41,9 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         if (num.equals("0")){
             pics.add(new Picts(R.drawable.cust1));
             pics.add(new Picts(R.drawable.cust2));
+        } else if (num.equals("1")){
+            pics.add(new Picts(R.drawable.kust91));
+            pics.add(new Picts(R.drawable.kust92));
         }
 
         super.onCreate(savedInstanceState);
