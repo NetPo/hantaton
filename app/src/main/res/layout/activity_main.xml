@@ -12,16 +12,25 @@
         android:layout_width="match_parent"
         android:layout_height="630dp" />
 
-    <ImageButton
+    <ImageView
         android:id="@+id/infoButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="78dp"
-        android:layout_marginEnd="277dp"
-        android:layout_marginBottom="26dp"
-        android:backgroundTint="#000000"
-        app:srcCompat="@drawable/ic_about_icon" />
+        app:srcCompat="@drawable/support" />
+
+    <Button
+        android:id="@+id/buttoncamera"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toEndOf="@+id/infoButton"
+        android:backgroundTint="#408eff"
+        android:text="Сканировать QR" />
+
 </RelativeLayout>

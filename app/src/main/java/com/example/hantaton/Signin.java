@@ -25,7 +25,7 @@ public class Signin extends AppCompatActivity {
                 IntentIntegrator intentIntegrator = new IntentIntegrator(
                         Signin.this
                 );
-                intentIntegrator.setBeepEnabled(true);
+                intentIntegrator.setBeepEnabled(false);
                 intentIntegrator.setOrientationLocked(true);
                 intentIntegrator.setCaptureActivity(Capture.class);
                 intentIntegrator.initiateScan();
